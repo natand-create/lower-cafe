@@ -1,0 +1,125 @@
+UX Research Brief · Web Design Zadání
+Lower Café Bystřice
+Kavárna v centru Bystřice — výběrová káva, víno, rum, welcome policy pro maminky s dětmi. Aktuálně existuje Webnode šablona plná stock fotek a placeholder obsahu. Cíl: první skutečný web, který přivede nové zákazníky a buduje lokální komunitu.
+Část 01
+Persony a zákazník
+Lucie, 32
+Maminka na mateřské · Příjem domácnosti 45–60k/m · Bystřice / okolí
+Motivace
+Chce se dostat z domova, cítit se jako člověk — ne jen jako máma. Hledá místo, kde neodsoudí její dítě, kde může dát dítě do koutku a 20 minut si v klidu sednout.
+Strachy
+„Přijdeme tam a budeme otravovat ostatní." „Nevím jestli mají přebalovák." „Co když dítě začne brečet?"
+Hledá na webu
+Fotky interiéru s dětmi, zmínku o dětském koutku, otevírací doba, kde přesně jsou (mapka).
+Přesvědčí ji
+Reálná fotka mámy s kávou a dítětem v koutku. Věta „Maminky vítány" — bez omluvy, jako fakt.
+Odradí ji
+Žádné fotky lidí. Chladný „luxusní" jazyk. Prázdná šablona bez obsahu.
+Její slova
+„Potřebuju se někam vypadnout, kde nebudu jako na obtíž."
+„Mají tam dětský koutek nebo ne?"
+Martin, 38
+OSVČ / remote worker · Příjem 70–100k/m · Dojíždí nebo pracuje z Bystřice
+Motivace
+Chce pracovat mimo kancelář, kde je slušná káva a wifi — ne jen vyhřát sedadlo v McDo. Odpoledne se chce zastavit na víno nebo rum bez toho, aby musel jet do Havlíčkova Brodu.
+Strachy
+„Budou mě tady tolerovat s laptopem celé dopoledne?" „Je ta káva fakt dobrá nebo džezva?" „Kdy zavírají?"
+Hledá na webu
+Menu + ceny, wifi, otevírací doba, jestli je to spíš kavárna nebo bar.
+Přesvědčí ho
+Konkrétní nabídka — druh kávy, výběr vín, ceny. Fotka interiéru s prázdnými sedačkami (prostor je).
+Odradí ho
+Žádné menu, neaktuální nebo žádná otevírací doba, stock fotky z Pexels.
+Jeho slova
+„Potřebuju místo, kde jsou normálně vítaní lidi s počítačem."
+„Dávám si raná kávu, odpoledne se zastavím na víno — ideálně na jednom místě."
+Kritická poznámka k současnému webu
+Stávající Webnode stránka má falešnou adresu (Václavské náměstí Praha), stock fotky bez lidí, placeholder texty o „kariérním poradenství" a žádné reálné menu. Pro obě persony je to okamžitý deal-breaker — nevěrohodnost = ztráta důvěry ještě před první návštěvou.
+Část 02
+Hypotézy pro redesign
+H1
+Reálné fotky jsou konverze #1
+Nahrazení stock fotek vlastními fotografiemi interiéru a lidí zvýší důvěryhodnost více než jakýkoliv text. Zákazník potřebuje vidět skutečné místo, ne ideál z Pexels.
+H2
+Správná adresa a otevírací doba = 40 % návštěv
+Většina lokálních zákazníků přijde na web jen pro dva údaje: kde to je a kdy jsou otevřeni. Tyto informace musí být viditelné bez scrollování a musí být přesné.
+H3
+Welcome policy pro maminky je USP, ne detail
+V regionu 9 000 obyvatel je explicitní přijetí maminek s dětmi silná diferenciace. Musí to být na homepage jako pozitivní výrok, ne schované v „Službách".
+H4
+Anglický název potřebuje lokální kotvu
+„Lower Café" zní v Bystřici jako aspirace — to je dobré. Ale web musí rychle vysvětlit, že to je tady, místní, dostupné. Jinak „Lower" působí jako Praha nebo Brno.
+H5
+Instagram feed jako živý důkaz funguje lépe než statická galerie
+Aktuální fotky nápojů a prostředí přímo na homepage ukazují, že podnik funguje a má charakter. Galerie ze šablony bez obsahu naopak působí jako podnik, který zavřel.
+Co zákazník musí vidět do 3 sekund
+1. Kde to je (Bystřice, konkrétní ulice)  ·  2. Co tam dělají (káva + víno + příjemné posezení)  ·  3. Že je to skutečné místo pro skutečné lidi — ne šablona
+Pocit: „Tohle je moje kavárna v mém městě — sem patřím."
+
+Trust signals pro tento segment
+Google Maps hodnocení
+Reálné fotky interiéru s lidmi
+Vlastní fotky nápojů (ne stock)
+Instagram live feed
+Přesná adresa + mapa
+Aktuální otevírací doba
+Telefonní číslo viditelně
+Jméno majitele / „o nás" s tváří
+Část 04
+Konkurenční mezera
+Co dělají všichni	Proč to nestačí
+Stock fotky kávy z Pexels/Unsplash	Zákazník pozná, že to není jejich pohár. Nulová důvěra.
+Obecný popis „útulná kavárna, domácí zákusky"	Říká to každý. Neodliší to nikoho.
+Schovaná nebo žádná otevírací doba	Zákazník odchází a jde jinam.
+Dětský koutek jako malý bullet v „Službách"	Maminky to nenajdou a nevěří tomu.
+Web bez jakékoliv osobnosti nebo příběhu	Všechny kavárny v regionu vypadají stejně.
+Co nikdo nedělá — příležitost
+Explicitní „mama-friendly" jako brand pilíř
+Žádná kavárna v Chotěboři/Bystřici to nemá jako hlavní sdělení na homepage. Lower Café to má v DNA — stačí to říct nahlas a hrdě.
+Kavárna + bar v jednom — bez omluvy
+Ranní káva, odpolední svačina, večerní rum nebo víno. Nikdo v okolí nekomunikuje tuto flexibilitu jasně. Je to silná výhoda pro městečko bez výběru.
+Osobnost — ne korporátní tón
+Okolní kavárny píší buď marketingovou omáčku nebo nezaujatý popis. Web s hlasem — teplý, přímý, trochu neformální — bude vyčnívat okamžitě.
+Část 05
+Doporučení pro design
+Váš obývák ve středu Bystřice.
+Alternativa: „Ranní káva, odpolední víno, večer rum. Vítejte v Lower Café."  ·  Nebo: „Místo, kde jste vítáni — i s kočárkem."
+Struktura homepage — v pořadí konverze
+1
+Hero — fotka + headline + základní info
+Reálná fotka interiéru nebo nápoje, headline, adresa, otevírací doba dnes. Tlačítko „Jak se dostat". Nic víc. Do 3 sekund.
+2
+Tři věci, které tu najdeš
+Kavárna / Bar / Prostor pro maminky — tři krátké bloky s ikonou a dvěma větami. Zákazník pochopí, jestli je to pro něj.
+3
+Fotogalerie — skutečná, ne stock
+4–6 fotek: interiér, detail pohárku, dítě v koutku, obsluha. Bez popisků — fotky mluví samy.
+4
+Výběr z menu (ne celý lístek)
+5–8 položek s cenami. Zákazník chce vědět, jestli si může dovolit přijít. Cena odstraňuje nejistotu.
+5
+O nás — s tváří, ne s firemní řečí
+Jméno majitele/majitelky, jedna fotka, tři věty o tom, proč kavárnu otevřeli. Lokální zákazník chce vědět, kdo za tím stojí.
+6
+Instagram feed nebo recenze
+Živý důkaz aktivity. Buď embed 6 posledních Insta fotek, nebo 2–3 Google recenze citované slovo od slova (s hvězdičkami).
+7
+Footer — kontakt, mapa, sociální sítě
+Adresa, telefon, Google Maps link, Instagram. Otevírací doba celý týden. Nic více.
+Vizuální jazyk
+Barvy
+Teplá krémová + tmavá espresso hnědá + crema zlatá jako akcent. Žádné studené šedé. Web musí „vonět" kávou.
+Typografie
+Serifový display font pro headlines (elegance, ne hipster). Sans-serif pro tělo — čitelný, přátelský. Velká mezera mezi řádky.
+Fotografie
+Teplé světlo, detail textury (šálek, dřevo, pěna). Vždy skuteční lidé. Nikdy šedivé stock zátiší bez osobnosti.
+3 věci které zvýší konverzi okamžitě
+01
+Správná adresa v Bystřici na každé stránce — viditelně, s Google Maps odkazem. Bez toho zákazník nedorazí.
+02
+Vlastní fotka na hero sekci místo stock obrázku. Stačí jedna kvalitní fotka ze smartphonu — okamžitě zvýší důvěryhodnost 10×.
+03
+Věta o maminkách a dětském koutku do prvního screenu. Tohle rozhodne pro celý segment, který jinak odejde beze slova.
+Největší problém aktuálně — stávající Webnode stránka aktivně poškozuje důvěryhodnost. Má falešnou adresu (Praha), stock fotky a placeholder texty o kariérním poradenství. To musí zmizet jako první krok, ještě před jakýmkoliv designem.
+Strategická příležitost — v Bystřici s 9 000 obyvateli nikdo nekomunikuje "mama-friendly" jako brand pilíř, ani kombinaci kavárna+bar v jednom hlase. Lower Café to má v DNA, jen to musí říct nahlas.
+Priorita pro designéra — než se dělá cokoli jiného, potřebujete od klienta: reálné fotografie interiéru, správnou adresu, otevírací dobu a alespoň 5 položek z menu s cenami. Bez tohoto materiálu žádný design nebude fungovat.

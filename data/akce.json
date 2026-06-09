@@ -1,0 +1,35 @@
+{
+  "akce": [
+    {
+      "hlavni": true,
+      "nazev": "Večer s kytarou",
+      "tag": "Živá hudba",
+      "datum": "Pátek 20. 6. · 19:00",
+      "foto": ""
+    },
+    {
+      "hlavni": false,
+      "nazev": "Saxofonový večer",
+      "datum": "15. 5. 2025",
+      "foto": ""
+    },
+    {
+      "hlavni": false,
+      "nazev": "Jarní slavnost",
+      "datum": "22. 4. 2025",
+      "foto": ""
+    },
+    {
+      "hlavni": false,
+      "nazev": "Čokoládový večer",
+      "datum": "8. 3. 2025",
+      "foto": ""
+    },
+    {
+      "hlavni": false,
+      "nazev": "Koktejlová noc",
+      "datum": "14. 2. 2025",
+      "foto": ""
+    }
+  ]
+}

@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lower Café | Bystřice nad Pernštejnem</title>
+<meta name="description" content="Výběrová káva, signature koktejly a místo kde se cítíte doma. Hodnocení 4.9★ na Google."/>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito:wght@300;400;500;600&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+img,video,iframe,svg{max-width:100%}
+html{font-size:16px;scroll-behavior:smooth;overflow-x:hidden}
+
+:root{
+  --bg:        #f7f3ed;
+  --bg2:       #f0ece4;
+  --bg3:       #e8e3da;
+  --ink:       #28231e;
+  --ink2:      #4a4540;
+  --ink3:      #8a8480;
+  --cream:     #fdfaf6;
+  --dark:      #1e1b18;
+  --dark2:     #262320;
+  --wood:      #8c6a48;
+  --wood2:     #a07d58;
+  --gold:      #b8935a;
+  --gold2:     #cca96e;
+  --serif:     'Lora', Georgia, serif;
+  --display:   'Pacifico', cursive;
+  --sans:      'Nunito', system-ui, sans-serif;
+  --mono:      'Nunito Sans', sans-serif;
+  --r:         4px;
+  --nav-h:     68px;
+}
+
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+  overflow-x:hidden;
+  width:100%;
+  max-width:100vw;
+  line-height:1.6;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--wood);border-radius:2px}
+
+/* ══════════════════════
+   NAV
+══════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;
+  background:rgba(20,18,16,0.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(200,135,58,0.25);
+  transition:border-color .3s;
+}
+.nav-logo{
+  font-family:var(--serif);
+  font-size:22px;
+  letter-spacing:0.06em;
+  color:var(--cream);
+  text-decoration:none;
+  font-weight:500;
+}
+.nav-logo-img{
+  height:26px;
+  width:auto;
+  display:block;
+  filter:brightness(0) invert(1);
+  opacity:0.9;
+  transition:opacity .2s;
+}
+.nav-logo:hover .nav-logo-img{opacity:1}
+.nav-logo em{
+  font-style:normal;
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:0.08em;
+  margin-left:4px;
+  font-family:var(--mono);
+  font-weight:300;
+}
+.nav-center{
+  display:flex;gap:26px;list-style:none;
+  position:absolute;left:50%;transform:translateX(-50%);
+}
+.nav-center a{
+  font-family:var(--mono);font-size:11px;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(250,247,241,0.5);text-decoration:none;
+  transition:color .2s;
+  padding:4px 0;
+  border-bottom:1px solid transparent;
+}
+.nav-center a:hover{color:var(--gold2);border-color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.nav-tel{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.06em;
+  color:rgba(250,247,241,0.4);text-decoration:none;
+  transition:color .2s;
+}
+.nav-tel:hover{color:var(--cream)}
+.nav-btn{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.12em;
+  text-transform:uppercase;
+  background:var(--wood);color:var(--cream);
+  padding:9px 20px;text-decoration:none;
+  border-radius:var(--r);
+  transition:background .2s;
+  white-space:nowrap;
+}
+.nav-btn:hover{background:var(--wood2)}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--cream);transition:.3s}
+.hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* Mobile menu */
+.mob-menu{
+  display:none;position:fixed;inset:0;z-index:199;
+  background:rgba(14,12,10,0.98);
+  flex-direction:column;align-items:center;justify-content:center;gap:8px;
+}
+.mob-menu.open{display:flex}
+.mob-menu a{
+  font-family:var(--serif);font-size:36px;letter-spacing:.06em;
+  color:rgba(250,247,241,0.75);text-decoration:none;
+  padding:10px 20px;transition:color .2s;
+}
+.mob-menu a:hover{color:var(--gold)}
+.mob-divider{width:40px;height:1px;background:rgba(200,135,58,0.3);margin:16px 0}
+.mob-phone{
+  font-family:var(--mono);font-size:15px;letter-spacing:.08em;
+  color:var(--gold)!important;
+}
+
+/* ══════════════════════
+   HERO
+══════════════════════ */
+#hero{
+  position:relative;
+  height:100vh;min-height:640px;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;
+  padding-top:var(--nav-h);
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  overflow:hidden;
+}
+.hero-bg video{
+  width:100%;height:100%;object-fit:cover;object-position:center 30%;
+  transform:scale(1.05);
+  transition:transform 1.5s ease-out;
+}
+.hero-bg video.loaded{transform:scale(1)}
+.hero-gradient{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(14,12,10,0.15) 0%,
+    rgba(14,12,10,0.1) 40%,
+    rgba(14,12,10,0.75) 75%,
+    rgba(14,12,10,0.95) 100%
+  );
+}
+
+/* Rating badge */
+.hero-badge{
+  position:absolute;top:calc(var(--nav-h) + 28px);right:40px;
+  background:rgba(20,18,16,0.85);
+  border:1px solid rgba(200,135,58,0.4);
+  backdrop-filter:blur(12px);
+  padding:28px 36px;
+  text-align:center;
+  border-radius:var(--r);
+  z-index:10;
+  min-width:140px;
+}
+.hero-badge-num{
+  font-family:var(--serif);font-size:56px;font-weight:700;
+  color:var(--cream);line-height:1;
+}
+.hero-badge-stars{color:var(--gold);font-size:16px;letter-spacing:4px;margin:10px 0 8px}
+.hero-badge-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(250,247,241,.5)}
+
+/* Hero content */
+.hero-content{
+  position:relative;z-index:5;
+  padding:0 72px 80px;
+  max-width:860px;
+}
+.hero-title{
+  font-family:var(--display);
+  font-size:clamp(80px,12vw,148px);
+  font-weight:400;
+  letter-spacing:.02em;
+  color:var(--cream);
+  line-height:.92;
+  margin-bottom:28px;
+}
+.hero-title span{
+  display:block;
+  font-family:var(--serif);
+  color:var(--gold);
+  font-style:italic;
+  font-size:0.38em;
+  letter-spacing:.06em;
+  font-weight:500;
+  margin-bottom:10px;
+  line-height:1.3;
+}
+.hero-logo-img{
+  display:block;
+  width:clamp(200px,48vw,660px);
+  height:auto;
+  filter:invert(1) brightness(1.15)
+         drop-shadow(1px 0 0 #fff)
+         drop-shadow(-1px 0 0 #fff)
+         drop-shadow(0 1px 0 #fff)
+         drop-shadow(0 -1px 0 #fff);
+  margin-top:64px;
+  margin-left:-12px;
+}
+.hero-right{
+  display:contents;
+}
+.hero-location{
+  font-family:var(--mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(250,247,241,.45);
+  margin-bottom:16px;
+  display:block;
+}
+.hero-tagline{
+  font-family:var(--serif);font-size:clamp(17px,1.9vw,22px);
+  font-weight:400;color:rgba(250,247,241,.75);
+  line-height:1.55;margin-bottom:36px;font-style:italic;
+}
+.hero-tagline strong{color:var(--gold2);font-weight:400;font-style:italic}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--wood);color:var(--cream);
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  padding:14px 28px;text-decoration:none;
+  border-radius:var(--r);
+  transition:background .2s;
+}
+.btn-primary:hover{background:var(--wood2)}
+.btn-primary .btn-arrow,
+.btn-ghost .btn-arrow{
+  display:inline-block;
+  transition:transform .25s cubic-bezier(.16,1,.3,1);
+}
+.btn-primary:hover .btn-arrow,
+.btn-ghost:hover .btn-arrow{
+  transform:translate(3px,-3px);
+}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(250,247,241,.25);color:rgba(250,247,241,.75);
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  padding:14px 28px;text-decoration:none;
+  border-radius:var(--r);
+  transition:all .2s;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+
+/* Hero actions row with mobile badge */
+.hero-actions-row{
+  display:contents;
+}
+.hero-badge-mob{
+  display:none;
+  flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(20,18,16,0.85);
+  border:1px solid rgba(200,135,58,0.4);
+  backdrop-filter:blur(12px);
+  padding:12px 16px;
+  text-align:center;
+  border-radius:var(--r);
+  flex-shrink:0;
+}
+.hero-badge-mob .hero-badge-num{font-size:28px}
+.hero-badge-mob .hero-badge-stars{font-size:10px;letter-spacing:2px;margin:4px 0 3px}
+.hero-badge-mob .hero-badge-lbl{font-size:8px}
+/* Hero quick links */
+.hero-quick-links{
+  display:flex;align-items:center;gap:10px;
+  margin-top:24px;
+}
+.hero-quick-links a{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(250,247,241,.45);
+  text-decoration:none;
+  transition:color .25s;
+  padding-bottom:2px;
+  border-bottom:1px solid transparent;
+}
+.hero-quick-links a:hover{
+  color:var(--gold2);
+  border-color:rgba(200,135,58,.5);
+}
+.hql-dot{
+  width:3px;height:3px;border-radius:50%;
+  background:rgba(200,135,58,.35);
+  flex-shrink:0;
+}
+
+/* Scroll indicator */
+.hero-scroll{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  z-index:5;display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.hero-scroll-line{
+  width:1px;height:40px;
+  background:linear-gradient(to bottom,rgba(200,135,58,0.7),transparent);
+  animation:scrollpulse 2s ease-in-out infinite;
+}
+@keyframes scrollpulse{0%,100%{transform:scaleY(1);opacity:.6}50%{transform:scaleY(0.7);opacity:1}}
+.hero-scroll-lbl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,247,241,.35)}
+
+/* ══════════════════════
+   INFO STRIP
+══════════════════════ */
+#strip{
+  background:var(--dark);
+  border-bottom:1px solid rgba(200,135,58,0.15);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.strip-item{
+  padding:20px 32px;
+  border-right:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:center;gap:14px;
+}
+.strip-item:last-child{border-right:none}
+.strip-icon{
+  line-height:1;
+  flex-shrink:0;
+  width:24px;height:24px;
+  display:flex;align-items:center;justify-content:center;
+}
+.strip-icon svg{width:22px;height:22px;overflow:visible}
+
+/* SVG icon animations */
+@keyframes steam-rise{
+  0%{transform:translateY(0) scaleX(1);opacity:.7}
+  50%{transform:translateY(-4px) scaleX(1.15);opacity:.4}
+  100%{transform:translateY(-8px) scaleX(0.9);opacity:0}
+}
+@keyframes cocktail-liquid{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-1.5px)}
+}
+@keyframes wifi-pulse{
+  0%,100%{opacity:.25}
+  50%{opacity:1}
+}
+@keyframes card-shimmer{
+  0%{transform:translateX(-110%)}
+  60%,100%{transform:translateX(110%)}
+}
+@keyframes wheel-turn{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes child-bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-3px)}
+}
+@keyframes star-pulse{
+  0%,100%{fill:rgba(200,135,58,0.3);filter:drop-shadow(0 0 0px rgba(200,135,58,0))}
+  50%{fill:rgba(200,135,58,0.6);filter:drop-shadow(0 0 4px rgba(200,135,58,0.4))}
+}
+@keyframes clock-min-spin{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes clock-hour-spin{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@keyframes wine-swirl{
+  0%,100%{transform:rotate(-4deg)}
+  50%{transform:rotate(4deg)}
+}
+
+.icon-coffee .steam-1{animation:steam-rise 2.2s ease-in-out infinite}
+.icon-coffee .steam-2{animation:steam-rise 2.2s ease-in-out .5s infinite}
+.icon-coffee .steam-3{animation:steam-rise 2.2s ease-in-out 1s infinite}
+.icon-cocktail .liquid{animation:cocktail-liquid 3s ease-in-out infinite}
+.icon-wifi .arc1{animation:wifi-pulse 2s ease-in-out .4s infinite}
+.icon-wifi .arc2{animation:wifi-pulse 2s ease-in-out .2s infinite}
+.icon-wifi .arc3{animation:wifi-pulse 2s ease-in-out 0s infinite}
+.icon-card .shimmer{animation:card-shimmer 3s ease-in-out infinite}
+.icon-access .wheel{animation:wheel-turn 6s linear infinite;transform-box:fill-box;transform-origin:center}
+.icon-child .figure{animation:child-bounce 2s ease-in-out infinite}
+.icon-wine .glass{animation:wine-swirl 4s ease-in-out infinite;transform-origin:12px 18px}
+.icon-star .star-shape{animation:star-pulse 2.5s ease-in-out infinite}
+.icon-clock .clock-min{animation:clock-min-spin 6s linear infinite;transform-origin:11px 11px}
+.icon-clock .clock-hour{animation:clock-hour-spin 72s linear infinite;transform-origin:11px 11px}
+.strip-lbl{
+  font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(250,247,241,.35);
+  margin-bottom:3px;
+}
+.strip-val{
+  font-family:var(--sans);font-size:13px;
+  color:rgba(250,247,241,.8);font-weight:400;
+}
+
+/* ══════════════════════
+   SEKCE: O NÁS
+══════════════════════ */
+#about{
+  background:var(--bg);
+  padding:100px 0;
+}
+.about-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.about-img-wrap{
+  position:relative;
+}
+.about-img-wrap img{
+  width:100%;height:520px;object-fit:cover;
+  border-radius:var(--r);
+  display:block;
+  filter:saturate(.85);
+}
+.about-img-badge{
+  position:absolute;bottom:28px;right:-24px;
+  background:var(--dark);
+  border:1px solid rgba(200,135,58,.3);
+  padding:20px 24px;
+  border-radius:var(--r);
+  text-align:center;
+  min-width:120px;
+}
+.about-img-badge .n{
+  font-family:var(--serif);font-size:44px;font-weight:400;
+  color:var(--gold);line-height:1;
+}
+.about-img-badge .l{
+  font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(250,247,241,.4);
+  margin-top:4px;line-height:1.5;
+}
+.about-text
+.section-kicker{
+  font-family:var(--mono);font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:16px;display:block;
+}
+.section-h{
+  font-family:var(--display);
+  font-size:clamp(34px,4vw,52px);
+  font-weight:400;line-height:1.05;
+  color:var(--ink);margin-bottom:24px;
+  letter-spacing:.01em;
+}
+.about-body{
+  font-size:15px;line-height:1.85;font-weight:300;
+  color:var(--ink2);margin-bottom:32px;
+}
+.about-features{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;margin-bottom:40px;
+}
+.feature-row{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;color:var(--ink2);
+  padding:10px 14px;background:var(--bg2);
+  border-radius:var(--r);
+  border-left:3px solid var(--gold);
+}
+.feature-icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:18px;height:18px;flex-shrink:0;
+}
+.feature-icon svg{width:17px;height:17px;overflow:visible}
+.hours-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:var(--bg3);border-radius:var(--r);
+  overflow:hidden;border:1px solid var(--bg3);
+  margin-bottom:32px;
+}
+.hours-strip-5{grid-template-columns:repeat(5,1fr)}
+.hours-item{
+  background:var(--cream);padding:14px 16px;
+  text-align:center;
+}
+.hours-day{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:4px}
+.hours-time{font-size:14px;font-weight:500;color:var(--ink)}
+
+/* ══════════════════════
+   SEKCE: OKAMŽIKY
+══════════════════════ */
+#moments{
+  background:var(--dark2);
+  padding:0;
+}
+.moments-header{
+  padding:64px 48px 56px;
+  max-width:1160px;margin:0 auto;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:24px;
+}
+.moments-header-left .section-h{color:var(--cream);margin-bottom:8px}
+.moments-header-left .section-kicker{color:var(--gold)}
+.moments-sub-text{
+  font-size:14px;color:rgba(250,247,241,.4);font-weight:300;
+  max-width:240px;text-align:right;line-height:1.7;
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+}
+.moments-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:rgba(255,255,255,.04);
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.moment-card{
+  position:relative;overflow:hidden;
+  aspect-ratio:3/4;cursor:default;
+}
+.moment-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .8s cubic-bezier(.25,.46,.45,.94);
+  filter:saturate(.6);
+}
+.moment-card:hover img{transform:scale(1.05);filter:saturate(.9)}
+.moment-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(14,12,10,.97) 0%,
+    rgba(14,12,10,.3) 55%,
+    transparent 100%
+  );
+}
+.moment-content{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:32px 28px;
+}
+.moment-tag{
+  font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:8px;
+  text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 20px rgba(0,0,0,.7);
+}
+.moment-title{
+  font-family:var(--serif);font-size:26px;font-weight:400;
+  letter-spacing:.02em;color:var(--cream);
+  line-height:1.1;margin-bottom:10px;
+  text-shadow:0 2px 12px rgba(0,0,0,.95),0 1px 4px rgba(0,0,0,.8);
+}
+.moment-desc{
+  font-size:12px;line-height:1.65;
+  color:rgba(250,247,241,.5);margin-bottom:16px;
+  text-shadow:0 1px 8px rgba(0,0,0,.95),0 0 16px rgba(0,0,0,.8);
+}
+.moment-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold);text-decoration:none;
+  border-bottom:1px solid rgba(200,135,58,.35);
+  padding-bottom:2px;
+  transition:border-color .2s,color .2s;
+  text-shadow:0 1px 6px rgba(0,0,0,.9),0 0 14px rgba(0,0,0,.7);
+}
+.moment-link:hover{color:var(--gold2);border-color:var(--gold2)}
+
+/* ══════════════════════
+   SEKCE: PÁTEČNÍ BAR
+══════════════════════ */
+#friday{
+  background:var(--dark);
+  padding:100px 0;
+}
+.friday-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.friday-img-wrap{
+  position:relative;
+  order:2;
+}
+.friday-img-wrap img{
+  width:100%;height:540px;object-fit:cover;
+  display:block;
+  filter:saturate(.5) brightness(.8);
+  border-radius:var(--r);
+}
+.friday-img-wrap::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(122,72,32,.35) 0%,transparent 60%);
+  border-radius:var(--r);
+  pointer-events:none;
+}
+.friday-content{order:1}
+.friday-live{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(122,72,32,.25);
+  border:1px solid rgba(200,135,58,.3);
+  padding:7px 14px;
+  border-radius:20px;
+  margin-bottom:28px;
+}
+.live-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+.live-text{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gold);
+}
+.friday-h{
+  font-family:var(--display);
+  font-size:clamp(36px,4.5vw,58px);
+  font-weight:400;letter-spacing:.02em;
+  color:var(--cream);line-height:1;
+  margin-bottom:20px;
+}
+.friday-h em{
+  font-style:italic;color:var(--gold2);
+  display:block;
+}
+.friday-body{
+  font-size:14px;line-height:1.85;font-weight:300;
+  color:rgba(250,247,241,.5);
+  margin-bottom:36px;max-width:380px;
+}
+.cocktail-list{list-style:none;margin-bottom:40px}
+.cocktail-item{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.cocktail-item:first-child{border-top:1px solid rgba(255,255,255,.07)}
+.c-name{
+  font-family:var(--serif);font-size:20px;font-weight:300;
+  letter-spacing:.03em;color:var(--cream);
+}
+.c-price{
+  font-family:var(--mono);font-size:12px;color:var(--gold);
+  letter-spacing:.06em;
+}
+.friday-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ══════════════════════
+   SEKCE: MENU
+══════════════════════ */
+#menu{
+  background:var(--bg);
+  padding:100px 0;
+}
+.menu-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+}
+.menu-header-row{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:56px;
+  padding-bottom:32px;
+  border-bottom:1px solid var(--bg3);
+  gap:24px;
+}
+.menu-desc-text{
+  font-size:14px;color:var(--ink3);font-weight:300;
+  max-width:300px;text-align:right;line-height:1.7;
+}
+.menu-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2px;background:var(--bg3);
+  border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--bg3);
+}
+.menu-cat{
+  background:var(--cream);
+  padding:40px 36px;
+}
+.menu-cat-icon{
+  margin-bottom:20px;display:block;
+  width:32px;height:32px;
+}
+.menu-cat-icon svg{width:32px;height:32px;overflow:visible}
+.menu-cat-title{
+  font-family:var(--serif);font-size:28px;font-weight:300;
+  letter-spacing:.04em;color:var(--ink);
+  margin-bottom:4px;
+}
+.menu-cat-sub{
+  font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:28px;
+}
+.menu-items{list-style:none}
+.menu-item{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:11px 0;
+  border-bottom:1px solid var(--bg2);
+  gap:8px;
+}
+.menu-item:last-child{border-bottom:none}
+.mi-name{font-size:14px;color:var(--ink2);font-weight:300}
+.mi-price{
+  font-family:var(--mono);font-size:12px;
+  color:var(--gold);white-space:nowrap;letter-spacing:.04em;
+}
+
+/* ══════════════════════
+   SEKCE: RECENZE
+══════════════════════ */
+#reviews{
+  background:var(--dark2);
+  padding:100px 0;
+}
+.reviews-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+}
+.reviews-top-row{
+  display:grid;grid-template-columns:auto 1fr;
+  gap:64px;align-items:center;
+  margin-bottom:64px;
+  padding-bottom:64px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.reviews-score{
+  text-align:center;
+  padding:40px 48px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(200,135,58,.2);
+  border-radius:var(--r);
+  flex-shrink:0;
+}
+.big-rating{
+  font-family:var(--serif);font-size:clamp(72px,8vw,100px);
+  font-weight:400;color:var(--cream);line-height:1;
+}
+.big-stars{color:var(--gold);font-size:14px;letter-spacing:4px;margin:6px 0 4px}
+.big-lbl{
+  font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:rgba(250,247,241,.35);
+}
+.reviews-hero-quote
+.qmark{
+  font-family:var(--serif);font-size:80px;font-weight:400;
+  color:rgba(200,135,58,.25);line-height:1;
+  margin-bottom:-20px;display:block;
+}
+.hero-review-text{
+  font-family:var(--serif);font-size:clamp(22px,2.8vw,32px);
+  font-weight:300;font-style:italic;
+  color:rgba(250,247,241,.85);
+  line-height:1.5;margin-bottom:20px;
+}
+.hero-review-author{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);
+}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.review-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-top:2px solid var(--wood);
+  padding:32px 28px;
+  border-radius:0 0 var(--r) var(--r);
+}
+.review-stars{color:var(--gold);font-size:12px;letter-spacing:3px;margin-bottom:16px}
+.review-text{
+  font-family:var(--serif);font-size:16px;font-style:italic;
+  font-weight:300;color:rgba(250,247,241,.75);
+  line-height:1.7;margin-bottom:20px;
+}
+.review-author{
+  font-family:var(--mono);font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(200,135,58,.7);
+}
+
+/* ══════════════════════
+   SEKCE: GALERIE
+══════════════════════ */
+#gallery{
+  background:var(--bg2);
+  padding:0;
+}
+.gallery-header-row{
+  padding:64px 48px 48px;
+  max-width:1160px;margin:0 auto;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:24px;
+}
+.gallery-header-row .section-h{margin-bottom:0}
+.gallery-ig{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink3);
+  text-decoration:none;
+  border-bottom:1px solid var(--bg3);padding-bottom:2px;
+  transition:color .2s,border-color .2s;
+  white-space:nowrap;
+}
+.gallery-ig:hover{color:var(--wood);border-color:var(--wood)}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:5fr 4fr 3fr;
+  grid-template-rows:280px 280px;
+  gap:3px;
+}
+.gi{overflow:hidden}
+.gi img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s cubic-bezier(.25,.46,.45,.94), filter .4s;
+  filter:saturate(.65);
+}
+.gi:hover img{transform:scale(1.04);filter:saturate(1)}
+.gi1{grid-column:1;grid-row:1/3}
+.gi2{grid-column:2;grid-row:1}
+.gi3{grid-column:3;grid-row:1}
+.gi4{grid-column:2;grid-row:2}
+.gi5{grid-column:3;grid-row:2}
+
+/* ══════════════════════
+   SEKCE: KONTAKT
+══════════════════════ */
+#contact{
+  background:var(--dark);
+  padding:100px 0 0;
+}
+.contact-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:start;
+  padding-bottom:100px;
+}
+.contact-text .section-h{color:var(--cream);margin-bottom:40px}
+.contact-text .section-kicker{color:var(--gold)}
+.contact-details-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:28px;margin-bottom:40px;
+}
+.cd-block
+.cd-lbl{
+  font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:8px;display:block;
+}
+.cd-val{
+  font-size:14px;line-height:1.8;font-weight:300;
+  color:rgba(250,247,241,.65);
+}
+.cd-val a{color:inherit;text-decoration:none;transition:color .2s}
+.cd-val a:hover{color:var(--gold2)}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+.contact-socials{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.social-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:11px 20px;border-radius:var(--r);
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  text-decoration:none;transition:all .2s;border:1px solid;flex-shrink:0;
+}
+.social-btn-fb{
+  background:rgba(24,119,242,0.12);
+  border-color:rgba(24,119,242,0.35);
+  color:rgba(100,160,255,0.9);
+}
+.social-btn-fb:hover{background:rgba(24,119,242,0.22);border-color:rgba(24,119,242,0.6);color:#6aa0ff}
+.social-btn-ig{
+  background:rgba(225,48,108,0.1);
+  border-color:rgba(225,48,108,0.3);
+  color:rgba(255,120,160,0.9);
+}
+.social-btn-ig:hover{background:rgba(225,48,108,0.2);border-color:rgba(225,48,108,0.55);color:#ff78a0}
+.social-btn svg{width:16px;height:16px;flex-shrink:0}
+.contact-map-wrap{
+  position:relative;
+  border-radius:var(--r);
+  overflow:hidden;
+  border:1px solid rgba(200,135,58,.15);
+}
+.contact-map-wrap iframe{
+  width:100%;height:440px;border:0;display:block;
+  filter:saturate(.2) contrast(1.2) brightness(.85);
+  transition:filter .4s;
+}
+.contact-map-wrap:hover iframe{filter:saturate(.7) contrast(1)}
+
+/* ══════════════════════
+   FOOTER
+══════════════════════ */
+footer{
+  background:var(--dark2);
+  border-top:1px solid rgba(200,135,58,.15);
+  padding:56px 0 32px;
+}
+.footer-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:48px;margin-bottom:40px;
+  align-items:start;
+}
+.footer-left{
+  display:flex;gap:40px;justify-content:flex-start;
+}
+.footer-center{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+}
+.footer-right{
+  display:flex;justify-content:flex-end;
+}
+.footer-logo-img{
+  display:block;
+  width:180px;
+  height:auto;
+  margin:0 auto 16px;
+  opacity:0.92;
+}
+.footer-tag{
+  font-size:12px;line-height:1.75;font-weight:300;
+  color:rgba(250,247,241,.3);margin-bottom:16px;
+  max-width:220px;
+}
+.footer-socials{display:flex;gap:14px;justify-content:center}
+.footer-socials a{
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(250,247,241,.3);
+  text-decoration:none;transition:color .2s;
+}
+.footer-socials a:hover{color:var(--gold)}
+.footer-col h4{
+  font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);
+  margin-bottom:18px;
+}
+.footer-col ul{list-style:none}
+.footer-col li{
+  font-size:13px;font-weight:300;line-height:1.6;
+  color:rgba(250,247,241,.3);margin-bottom:8px;
+}
+.footer-col li a{color:inherit;text-decoration:none;transition:color .2s}
+.footer-col li a:hover{color:rgba(250,247,241,.7)}
+.footer-bottom{
+  max-width:1160px;margin:0 auto;padding:24px 48px 0;
+  border-top:1px solid rgba(255,255,255,.05);
+  display:flex;justify-content:space-between;align-items:center;
+  gap:16px;flex-wrap:wrap;
+}
+.footer-copy{font-family:var(--mono);font-size:10px;color:rgba(250,247,241,.2);letter-spacing:.08em}
+.footer-amenities{
+  display:flex;gap:20px;
+}
+.footer-amenities span{
+  font-family:var(--mono);font-size:10px;
+  color:rgba(250,247,241,.2);letter-spacing:.08em;
+}
+.footer-legal{
+  max-width:1160px;margin:0 auto;padding:12px 48px 28px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.06em;
+  color:rgba(250,247,241,.15);
+  text-align:center;
+}
+.footer-legal a{color:rgba(250,247,241,.2);text-decoration:none}
+.footer-legal a:hover{color:rgba(250,247,241,.4)}
+
+/* ══════════════════════
+   SEKCE: AKCE
+══════════════════════ */
+#events{
+  background:var(--bg2);
+  padding:72px 0;
+  border-top:1px solid var(--bg3);
+  border-bottom:1px solid var(--bg3);
+}
+.events-inner{
+  max-width:1160px;margin:0 auto;padding:0 48px;
+}
+.events-header-row{
+  display:flex;align-items:baseline;justify-content:space-between;
+  margin-bottom:32px;
+}
+.events-header-row .section-h{
+  margin-bottom:0;
+}
+
+/* Hlavní layout — nastávající vlevo, proběhlé vpravo */
+.events-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:start;
+}
+
+/* Nastávající — fotka nahoře, text pod ní */
+.event-main{
+  background:var(--cream);
+  border-radius:var(--r);
+  border:1px solid var(--bg3);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:0;
+}
+.event-main-img{
+  width:100%;
+  aspect-ratio:2/3;
+  flex-shrink:0;
+  position:relative;
+  background:var(--bg3);
+  overflow:hidden;
+}
+.event-main-img img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.event-main-placeholder{
+  width:100%;height:100%;min-height:200px;
+  background:linear-gradient(135deg,var(--bg2) 0%,var(--bg3) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:52px;
+}
+.event-main-body{
+  padding:20px 22px;
+  display:flex;flex-direction:column;
+  gap:7px;
+}
+.event-main-tag{
+  font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold);
+}
+.event-main-title{
+  font-family:var(--serif);font-size:20px;font-weight:500;
+  color:var(--ink);line-height:1.2;
+}
+.event-main-meta{
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  color:var(--ink3);line-height:1.6;
+}
+.event-main-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--wood);
+  text-decoration:none;margin-top:4px;
+  border-bottom:1px solid rgba(140,106,72,.3);
+  padding-bottom:1px;width:fit-content;
+  transition:color .2s,border-color .2s;
+}
+.event-main-cta:hover{color:var(--wood2);border-color:var(--wood2)}
+
+/* Proběhlé — pravý sloupec */
+.events-past-col{
+  display:flex;flex-direction:column;gap:12px;
+}
+.events-past-label{
+  font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink3);
+  display:block;margin-bottom:4px;
+}
+.events-past-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+.event-past-thumb{
+  position:relative;
+  aspect-ratio:2/3;
+  border-radius:var(--r);
+  overflow:hidden;
+  background:var(--bg3);
+  opacity:.5;
+  filter:saturate(.3);
+  transition:opacity .25s,filter .25s;
+  cursor:default;
+}
+.event-past-thumb:hover{
+  opacity:.75;
+  filter:saturate(.65);
+}
+.event-past-thumb img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.event-past-thumb-placeholder{
+  width:100%;height:100%;
+  background:linear-gradient(135deg,var(--bg2) 0%,var(--bg3) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;
+}
+
+@media(max-width:860px){
+  .events-layout{grid-template-columns:1fr}
+}
+
+/* ══════════════════════
+   REVEAL
+══════════════════════ */
+.reveal{
+  opacity:0;transform:translateY(28px);
+  transition:opacity .75s cubic-bezier(.25,.46,.45,.94),transform .75s cubic-bezier(.25,.46,.45,.94);
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:.1s}
+.rd2{transition-delay:.2s}
+.rd3{transition-delay:.3s}
+.rd4{transition-delay:.4s}
+
+/* ══════════════════════
+   RESPONSIVE
+══════════════════════ */
+@media(max-width:960px){
+  nav{padding:0 24px}
+  .nav-center{display:none}
+  .nav-tel{display:none}
+  .hamburger{display:flex}
+  #hero{justify-content:center;padding-bottom:0}
+  .hero-content{grid-template-columns:1fr;padding:0 28px 48px;gap:28px}
+  .hero-right{padding-bottom:0}
+  .hero-tagline{font-size:18px}
+  .hero-badge{display:none}
+  .hero-badge-mob{display:flex}
+  .hero-actions-row{display:flex;align-items:flex-end;gap:12px}
+  #strip{grid-template-columns:1fr 1fr}
+  .strip-item:nth-child(2){border-right:none}
+  .about-inner,.friday-inner,.contact-inner{grid-template-columns:1fr;gap:48px;padding:0 28px}
+  #about,#friday,#menu,#reviews,#contact{padding:72px 0}
+  .about-img-badge{right:0;bottom:16px}
+  .friday-img-wrap{order:1;display:none}
+  .friday-content{order:2}
+  .moments-header{flex-direction:column;align-items:flex-start;padding:48px 28px 40px}
+  .moments-sub-text{text-align:left;max-width:100%}
+  .moments-grid{grid-template-columns:1fr}
+  .moment-card{aspect-ratio:4/3}
+  .menu-inner{padding:0 28px}
+  .menu-header-row{flex-direction:column;align-items:flex-start}
+  .menu-desc-text{text-align:left}
+  .menu-grid{grid-template-columns:1fr}
+  .reviews-inner{padding:0 28px}
+  .reviews-top-row{grid-template-columns:1fr;gap:40px}
+  .reviews-grid{grid-template-columns:1fr}
+  .events-inner{padding:0 28px}
+  .events-past-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-header-row{flex-direction:column;align-items:flex-start;padding:48px 28px 32px}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gi1{grid-column:1/3;grid-row:1;height:260px}
+  .gi2,.gi3,.gi4,.gi5{height:200px}
+  .gi2{grid-column:1;grid-row:2}.gi3{grid-column:2;grid-row:2}
+  .gi4{grid-column:1;grid-row:3}.gi5{grid-column:2;grid-row:3}
+  .footer-inner{grid-template-columns:1fr;gap:40px;padding:0 28px}
+  .footer-left{justify-content:flex-start;gap:32px}
+  .footer-center{order:-1}
+  .footer-right{justify-content:flex-start}
+  .footer-bottom{padding:20px 28px 0}
+}
+@media(max-width:560px){
+  #strip{grid-template-columns:1fr}
+  .strip-item{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.06)}
+  .about-features{grid-template-columns:1fr}
+  .hours-strip{grid-template-columns:1fr}
+  .hours-strip-5{grid-template-columns:repeat(2,1fr)}
+  .contact-details-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-left{flex-direction:column;gap:28px}
+  .hero-logo-img{
+    width:min(85vw,300px);
+    min-width:unset;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .hero-content{padding:0 20px 40px!important}
+  .about-inner,.friday-inner,.contact-inner{padding:0 20px!important}
+  .menu-inner,.reviews-inner,.events-inner{padding:0 20px!important}
+  .footer-inner{padding:0 20px!important}
+  .footer-bottom,.footer-legal{padding-left:20px!important;padding-right:20px!important}
+  section{padding-left:0!important;padding-right:0!important}
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="image__2_-removebg-preview.png" alt="kavárna" class="nav-logo-img"/>
+  </a>
+  <ul class="nav-center">
+    <li><a href="#about">O nás</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#friday">Páteční bar</a></li>
+    <li><a href="#events">Akce</a></li>
+    <li><a href="#gallery">Galerie</a></li>
+    <li><a href="#reviews">Recenze</a></li>
+    <li><a href="#contact">Mapa &amp; kontakt</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+420774889191" class="nav-tel">+420 774 889 191</a>
+    <a href="tel:+420774889191" class="nav-btn">Rezervace →</a>
+  </div>
+  <button class="hamburger" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- Mobile menu -->
+<div class="mob-menu" id="mob">
+  <a href="#about" onclick="closeMob()">O nás</a>
+  <a href="#menu" onclick="closeMob()">Menu</a>
+  <a href="#friday" onclick="closeMob()">Páteční bar</a>
+  <a href="#events" onclick="closeMob()">Akce</a>
+  <a href="#gallery" onclick="closeMob()">Galerie</a>
+  <a href="#reviews" onclick="closeMob()">Recenze</a>
+  <a href="#contact" onclick="closeMob()">Kontakt &amp; mapa</a>
+
+</div>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <video id="hero-vid"
+      autoplay muted loop playsinline
+      preload="auto"
+      poster="herovid-poster.jpg">
+      <source src="herovid.webm" type="video/webm"/>
+      <source src="herovid.mp4" type="video/mp4"/>
+    </video>
+    <div class="hero-gradient"></div>
+  </div>
+
+  <div class="hero-badge">
+    <div class="hero-badge-num">4.9</div>
+    <div class="hero-badge-stars">★★★★★</div>
+    <div class="hero-badge-lbl">50+ recenzí</div>
+  </div>
+
+  <div class="hero-content">
+      <div class="hero-location reveal">Bystřice nad Pernštejnem · pod kostelem</div>
+      <div class="hero-title reveal">
+        <span>Coffee · Lounge</span>
+        <img src="IMG_6624.png" alt="Lower Café" class="hero-logo-img"/>
+      </div>
+      <p class="hero-tagline reveal rd1">
+        Lepší jednou vidět,<br>
+        <strong>než stokrát slyšet.</strong>
+      </p>
+      <div class="hero-actions-row reveal rd2">
+        <div class="hero-actions">
+          <a href="tel:+420774889191" class="btn-primary"><span class="btn-arrow">↗</span> Rezervovat stůl</a>
+          <a href="#menu" class="btn-ghost">Prohlédnout menu</a>
+        </div>
+        <div class="hero-badge-mob">
+          <div class="hero-badge-num">4.9</div>
+          <div class="hero-badge-stars">★★★★★</div>
+          <div class="hero-badge-lbl">50+ recenzí</div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <div class="hero-scroll-lbl">Scroll</div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div id="strip">
+  <div class="strip-item reveal">
+    <span class="strip-icon"><svg class="icon-star" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <polygon class="star-shape" points="11,2 13.5,8.5 20.5,8.5 14.8,12.8 17,19.5 11,15.5 5,19.5 7.2,12.8 1.5,8.5 8.5,8.5" fill="rgba(200,135,58,0.3)" stroke="rgba(200,135,58,0.8)" stroke-width="1.1" stroke-linejoin="round"/>
+</svg></span>
+    <div>
+      <div class="strip-lbl">Google hodnocení</div>
+      <div class="strip-val">4.9 / 50+ recenzí</div>
+    </div>
+  </div>
+  <div class="strip-item reveal rd1">
+    <span class="strip-icon"><svg class="icon-cocktail" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g class="liquid">
+    <path d="M4 3L11 12L18 3H4Z" fill="rgba(200,135,58,0.25)" stroke="rgba(200,135,58,0.7)" stroke-width="1.2" stroke-linejoin="round"/>
+    <line x1="11" y1="12" x2="11" y2="18" stroke="rgba(200,135,58,0.7)" stroke-width="1.2"/>
+    <line x1="7.5" y1="18" x2="14.5" y2="18" stroke="rgba(200,135,58,0.7)" stroke-width="1.2" stroke-linecap="round"/>
+    <circle cx="15" cy="5" r="1.2" fill="rgba(200,135,58,0.8)"/>
+  </g>
+</svg></span>
+    <div>
+      <div class="strip-lbl">Páteční bar</div>
+      <div class="strip-val">Každý pátek od 20:00</div>
+    </div>
+  </div>
+  <div class="strip-item reveal rd2">
+    <span class="strip-icon"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="7" cy="2.5" r="2" fill="rgba(200,135,58,0.85)"/>
+  <path d="M7 5 L7 11 L14 11 L16 16" stroke="rgba(200,135,58,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M7 11 L5 15" stroke="rgba(200,135,58,0.85)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <circle cx="11" cy="18" r="3.5" stroke="rgba(200,135,58,0.85)" stroke-width="1.6" fill="none"/>
+</svg></span>
+    <div>
+      <div class="strip-lbl">Pro každého</div>
+      <div class="strip-val">Bezbariérový · dětský koutek</div>
+    </div>
+  </div>
+  <div class="strip-item reveal rd3">
+    <span class="strip-icon"><svg class="icon-clock" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="11" cy="11" r="9" stroke="rgba(200,135,58,0.7)" stroke-width="1.2" fill="none"/>
+  <line class="clock-min" x1="11" y1="11" x2="11" y2="4.5" stroke="rgba(200,135,58,0.9)" stroke-width="1.3" stroke-linecap="round"/>
+  <line class="clock-hour" x1="11" y1="11" x2="15" y2="13" stroke="rgba(200,135,58,0.9)" stroke-width="1.3" stroke-linecap="round"/>
+  <circle cx="11" cy="11" r="1.2" fill="rgba(200,135,58,0.9)"/>
+</svg></span>
+    <div>
+      <div class="strip-lbl">Otevřeno dnes</div>
+      <div class="strip-val" id="today-hours">Po–Čt 10:00–20:00</div>
+    </div>
+  </div>
+</div>
+
+<!-- O NÁS -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap reveal">
+      <img src="fotointerier.webp" alt="Interiér Lower Café" loading="lazy"/>
+      <div class="about-img-badge">
+        <div class="n">6×</div>
+        <div class="l">týdně<br>pro vás</div>
+      </div>
+    </div>
+    <div class="about-text reveal rd1">
+      <span class="section-kicker">Náš příběh</span>
+      <h2 class="section-h">Moderní kavárna<br>v Bystřici</h2>
+      <p class="about-body">Nově otevřená Kavárna, jejímž domovem je Bystřice nad Pernštejnem. Má své kouzlo odrážející se v atmosféře interiéru kavárny. Příjemné, klidné prostředí nabité pozitivním duchem zanechává v zákaznících Kavárny snů nezapomenutelný pocit.</p>
+      <p class="about-body">Výběrová káva ráno, víno odpoledne, signature koktejly v noci. Příjemné místo pro setkávání, od ranní kávy až po večer s přáteli.</p>
+
+      <div class="about-features">
+        <div class="feature-row"><span class="feature-icon"><svg class="icon-wifi" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="arc3" d="M1.5 7 Q8.5 1 15.5 7" stroke="var(--gold)" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+  <path class="arc2" d="M3.5 10 Q8.5 5.5 13.5 10" stroke="var(--gold)" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+  <path class="arc1" d="M5.5 13 Q8.5 10.5 11.5 13" stroke="var(--gold)" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+  <circle cx="8.5" cy="15.5" r="1.2" fill="var(--gold)"/>
+</svg></span> Wi-Fi zdarma</div>
+        <div class="feature-row"><span class="feature-icon"><svg class="icon-card" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="3.5" width="15" height="10" rx="1.5" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+  <line x1="1" y1="7" x2="16" y2="7" stroke="var(--gold)" stroke-width="1.2"/>
+  <rect x="3" y="9.5" width="4" height="2" rx=".5" fill="rgba(200,135,58,0.5)"/>
+  <clipPath id="card-clip"><rect x="1" y="3.5" width="15" height="10" rx="1.5"/></clipPath>
+  <rect class="shimmer" x="0" y="3" width="6" height="11" fill="rgba(255,255,255,0.12)" clip-path="url(#card-clip)" transform="skewX(-15)"/>
+</svg></span> Platba kartou / NFC</div>
+        <div class="feature-row"><span class="feature-icon"><svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="2" r="1.5" fill="var(--gold)"/>
+  <path d="M5 4 L5 8.5 L10.5 8.5 L12 12" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M5 8.5 L3.5 12" stroke="var(--gold)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <circle cx="8.5" cy="14" r="2.8" stroke="var(--gold)" stroke-width="1.3" fill="none"/>
+</svg></span> Bezbariérový přístup</div>
+        <div class="feature-row"><span class="feature-icon"><svg class="icon-child" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g class="figure">
+    <circle cx="8.5" cy="3" r="2" fill="var(--gold)"/>
+    <path d="M8.5 5.5 L8.5 10.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M5.5 7.5 L8.5 6.5 L11.5 7.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M8.5 10.5 L6 14.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M8.5 10.5 L11 14.5" stroke="var(--gold)" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</svg></span> Dětský koutek</div>
+      </div>
+
+      <div class="hours-strip hours-strip-5">
+        <div class="hours-item">
+          <div class="hours-day">Pondělí</div>
+          <div class="hours-time">Zavřeno</div>
+        </div>
+        <div class="hours-item">
+          <div class="hours-day">Út – Čt</div>
+          <div class="hours-time">10:00–20:00</div>
+        </div>
+        <div class="hours-item">
+          <div class="hours-day">Pátek</div>
+          <div class="hours-time">13:00–22:00</div>
+        </div>
+        <div class="hours-item">
+          <div class="hours-day">Sobota</div>
+          <div class="hours-time">13:00–20:00</div>
+        </div>
+        <div class="hours-item">
+          <div class="hours-day">Neděle</div>
+          <div class="hours-time">13:00–18:00</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="tel:+420774889191" class="btn-primary" style="background:var(--wood);color:var(--cream)"><span class="btn-arrow">↗</span> Zavolat a rezervovat</a>
+        <a href="https://maps.app.goo.gl/yU9Yy5uxZEaB2Mes9" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="border-color:var(--bg3);color:var(--ink2)">Navigovat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OKAMŽIKY -->
+<section id="moments">
+  <div class="moments-header">
+    <div class="moments-header-left">
+      <span class="section-kicker">Pro každého</span>
+      <h2 class="section-h reveal" style="color:var(--cream)">Váš moment<br>v Lower Café</h2>
+    </div>
+  </div>
+  <div class="moments-grid">
+    <div class="moment-card reveal">
+      <img src="fotoranní-kava.webp" alt="Ranní káva" loading="lazy"/>
+      <div class="moment-overlay"></div>
+      <div class="moment-content">
+        <div class="moment-tag">Po–Čt od 10:00</div>
+        <div class="moment-title">Pondělní<br>káva</div>
+        <div class="moment-desc">Výběrová zrna, Wi-Fi, pohodlné křeslo. Home-office funguje lépe odsud.</div>
+        <a href="#menu" class="moment-link">Menu ↗</a>
+      </div>
+    </div>
+    <div class="moment-card reveal rd1">
+      <img src="pratele.webp" alt="Sobota s přáteli" loading="lazy"/>
+      <div class="moment-overlay"></div>
+      <div class="moment-content">
+        <div class="moment-tag">Sobota odpoledne</div>
+        <div class="moment-title">Káva pro<br>tebe</div>
+        <div class="moment-desc">Dětský koutek, bezbariérový přístup. Přijďte bez starostí, s kým chcete.</div>
+        <a href="tel:+420774889191" class="moment-link">Zavolat ↗</a>
+      </div>
+    </div>
+    <div class="moment-card reveal rd2">
+      <img src="koktejly.webp" alt="Páteční koktejly" loading="lazy"/>
+      <div class="moment-overlay"></div>
+      <div class="moment-content">
+        <div class="moment-tag">Pátek &amp; Sobota od 20:00</div>
+        <div class="moment-title">Páteční<br>bar</div>
+        <div class="moment-desc">Signature koktejly, dobrá nálada a atmosféra, která trvá do pozdních hodin.</div>
+        <a href="#friday" class="moment-link">Páteční bar ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PÁTEČNÍ BAR -->
+<section id="friday">
+  <div class="friday-inner">
+    <div class="friday-content">
+      <div class="friday-live reveal">
+        <div class="live-dot"></div>
+        <span class="live-text">Každý pátek od 20:00</span>
+      </div>
+      <h2 class="friday-h reveal rd1">
+        Páteční<br>
+        <em>koktejlový bar</em>
+      </h2>
+      <p class="friday-body reveal rd2">Signature koktejly, dobrá nálada a atmosféra, která trvá do pozdních hodin. Rezervujte si stůl — místa jsou omezená.</p>
+      <ul class="cocktail-list reveal rd2">
+        <li class="cocktail-item"><span class="c-name">Mojito Classic</span><span class="c-price">129 Kč</span></li>
+        <li class="cocktail-item"><span class="c-name">Aperol Spritz</span><span class="c-price">90 Kč</span></li>
+        <li class="cocktail-item"><span class="c-name">Hugo Spritz</span><span class="c-price">150 Kč</span></li>
+        <li class="cocktail-item"><span class="c-name">Bombardino</span><span class="c-price">150 Kč</span></li>
+      </ul>
+      <div class="friday-actions reveal rd3">
+        <a href="tel:+420774889191" class="btn-primary"><span class="btn-arrow">↗</span> Rezervovat stůl</a>
+        <a href="#menu" class="btn-ghost" style="border-color:rgba(250,247,241,.2)">Celé menu</a>
+      </div>
+    </div>
+    <div class="friday-img-wrap reveal rd1">
+      <img src="patecni-bar.webp" alt="Páteční koktejlový bar" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="menu-inner">
+    <div class="menu-header-row">
+      <div>
+        <h2 class="section-h reveal">Naše menu</h2>
+      </div>
+      <p class="menu-desc-text reveal rd1">Výběrová káva · Víno · Domácí limonády · Signature koktejly</p>
+    </div>
+    <div class="menu-grid" id="menu-grid">
+      <!-- Dynamicky načteno z data/menu.json -->
+    </div>
+  </div>
+</section>
+
+<!-- AKCE -->
+<section id="events">
+  <div class="events-inner">
+    <div class="events-header-row">
+      <div>
+        <h2 class="section-h reveal">Nastávající akce</h2>
+      </div>
+    </div>
+    <div class="events-layout" id="events-layout">
+      <!-- Dynamicky načteno z data/akce.json -->
+    </div>
+  </div>
+</section>
+
+<!-- RECENZE -->
+<section id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-top-row">
+      <div class="reviews-score reveal">
+        <div class="big-rating">4.9</div>
+        <div class="big-stars">★★★★★</div>
+        <div class="big-lbl">Google recenze</div>
+      </div>
+      <div class="reviews-hero-quote reveal rd1">
+        <span class="qmark">"</span>
+        <p class="hero-review-text">Úžasná a nádherná kavárna, moc milá obsluha. Budeme vás doporučovat všem!</p>
+        <div class="hero-review-author">Lenka K. · Google · ★★★★★</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Velmi příjemná obsluha, skvělá káva. Super místo na kafe s kamarádkou i na práci nebo čtení knížky. Určitě se vrátím."</p>
+        <div class="review-author">Martina D. · Google</div>
+      </div>
+      <div class="review-card reveal rd1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Kavárnu jsme objevily s kamarádkou a je suprová i díky dětskému koutku. Paní je úplně super i k dětem. Káva výborná, prostředí útulné a čisté."</p>
+        <div class="review-author">Barbora V. · Google</div>
+      </div>
+      <div class="review-card reveal rd2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Super místo, výborná káva a koktejly. Příjemný personál, krásné prostředí. Rozhodně doporučuji!"</p>
+        <div class="review-author">Tomáš N. · Google</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="gallery">
+  <div class="gallery-header-row">
+    <div>
+      <span class="section-kicker">Atmosféra</span>
+      <h2 class="section-h reveal">Nahlédněte k nám</h2>
+    </div>
+    <a href="https://www.instagram.com/lower_cafe" target="_blank" rel="noopener noreferrer" class="gallery-ig reveal rd1">↗ @lower_cafe na Instagramu</a>
+  </div>
+  <div class="gallery-grid">
+    <div class="gi gi1 reveal">
+      <img src="galerie1.webp" alt="Interiér" loading="lazy"/>
+    </div>
+    <div class="gi gi2 reveal rd1">
+      <img src="galerie2.webp" alt="Latte art" loading="lazy"/>
+    </div>
+    <div class="gi gi3 reveal rd2">
+      <img src="galerie3.webp" alt="Koktejly" loading="lazy"/>
+    </div>
+    <div class="gi gi4 reveal rd1">
+      <img src="galerie4.webp" alt="Interiér Lower Café" loading="lazy"/>
+    </div>
+    <div class="gi gi5 reveal rd2">
+      <img src="galerie5.webp" alt="Dezert" loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-text">
+      <h2 class="section-h reveal" style="color:var(--cream)">Zastavte se<br>u nás</h2>
+      <div class="contact-details-grid reveal rd1">
+        <div class="cd-block">
+          <span class="cd-lbl">Adresa</span>
+          <div class="cd-val">Kostelní 173<br>593 01 Bystřice n. P.<br><span style="opacity:.5;font-size:12px">(pod kostelem)</span></div>
+        </div>
+        <div class="cd-block">
+          <span class="cd-lbl">Otevírací doba</span>
+          <div class="cd-val">Po: Zavřeno<br>Út–Čt: 10:00–20:00<br>Pá: 13:00–22:00<br>So: 13:00–20:00<br>Ne: 13:00–18:00</div>
+        </div>
+        <div class="cd-block">
+          <span class="cd-lbl">Telefon</span>
+          <div class="cd-val"><a href="tel:+420774889191">+420 774 889 191</a></div>
+        </div>
+        <div class="cd-block">
+          <span class="cd-lbl">E-mail</span>
+          <div class="cd-val"><a href="mailto:makoservises@seznam.cz">makoservises@seznam.cz</a></div>
+        </div>
+      </div>
+      <div class="contact-actions reveal rd2">
+        <a href="tel:+420774889191" class="btn-primary"><span class="btn-arrow">↗</span> Zavolat a rezervovat</a>
+        <a href="https://maps.app.goo.gl/yU9Yy5uxZEaB2Mes9" target="_blank" rel="noopener noreferrer" class="btn-ghost" style="border-color:rgba(250,247,241,.2)">Navigovat</a>
+      </div>
+      <div class="contact-socials reveal rd3">
+        <a href="https://www.facebook.com/share/18NKhC4BeZ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-fb">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/lower_cafe?igsh=bzBncm15Z2p0YXFx" target="_blank" rel="noopener noreferrer" class="social-btn social-btn-ig">
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="contact-map-wrap reveal rd1">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2580.2!2d16.2626535!3d49.5226035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470d7987cea9461d%3A0x2170d93f50f7b4ba!2sLower%20caf%C3%A9%20Kav%C3%A1rna!5e0!3m2!1scs!2scz!4v1"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Lower Café mapa">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <!-- Levý sloupec: Navigace + Otevírací doba -->
+    <div class="footer-left">
+      <div class="footer-col">
+        <h4>Navigace</h4>
+        <ul>
+          <li><a href="#about">O nás</a></li>
+          <li><a href="#moments">Okamžiky</a></li>
+          <li><a href="#friday">Páteční bar</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#events">Akce</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Otevírací doba</h4>
+        <ul>
+          <li>Pondělí: Zavřeno</li>
+          <li>Út–Čt: 10:00–20:00</li>
+          <li>Pátek: 13:00–22:00</li>
+          <li>Sobota: 13:00–20:00</li>
+          <li>Neděle: 13:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Střed: Logo -->
+    <div class="footer-center">
+      <img src="Logo-LowerCafe-removebg-preview.png" alt="Lower Café logo" class="footer-logo-img"/>
+      <p class="footer-tag">Moderní kavárna v Bystřici nad Pernštejnem.<br>Káva, víno, nealko a signature koktejly.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/18NKhC4BeZ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.instagram.com/lower_cafe?igsh=bzBncm15Z2p0YXFx" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://maps.app.goo.gl/yU9Yy5uxZEaB2Mes9" target="_blank" rel="noopener noreferrer">Google Maps</a>
+      </div>
+    </div>
+
+    <!-- Pravý sloupec: Kontakt -->
+    <div class="footer-right">
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+420774889191">+420 774 889 191</a></li>
+          <li><a href="mailto:makoservises@seznam.cz">makoservises@seznam.cz</a></li>
+          <li>Kostelní 173<br>593 01 Bystřice n. P.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© <span id="copy-year"></span> Lower Café · Bystřice nad Pernštejnem</span>
+    <div class="footer-amenities">
+      <span>Wi-Fi</span><span>·</span><span>Karta</span><span>·</span><span>Bezbariérový</span><span>·</span><span>Dětský koutek</span>
+    </div>
+  </div>
+  <div class="footer-legal">
+    Provozovatel: Mako Services s.r.o. · Tábor 534/50D, Ponava, 602 00 Brno · IČO: 06322689 · DIČ: CZ06322689 · Odpovědná osoba: Marcel Komorník · <a href="tel:+420739131875">739 131 875</a> · <a href="mailto:makoservises@seznam.cz">makoservises@seznam.cz</a> · <a href="cookies.html">Zásady cookies</a>
+  </div>
+</footer>
+
+<!-- ══ COOKIE BANNER ══ -->
+<div id="cookie-banner" role="dialog" aria-label="Souhlas s cookies" aria-modal="true">
+  <div class="cb-inner">
+    <div class="cb-text">
+      <p class="cb-title">🍪 Tento web používá cookies</p>
+      <p class="cb-desc">Používáme nezbytné cookies pro správnou funkci webu a analytické cookies pro sledování návštěvnosti. Více informací v <a href="cookies.html" target="_blank">Zásadách cookies</a>.</p>
+    </div>
+    <div class="cb-actions">
+      <button id="cb-settings-btn" class="cb-btn cb-btn-settings">Nastavení</button>
+      <button id="cb-reject-btn" class="cb-btn cb-btn-reject">Odmítnout</button>
+      <button id="cb-accept-btn" class="cb-btn cb-btn-accept">Přijmout vše</button>
+    </div>
+  </div>
+  <div id="cb-detail" class="cb-detail" hidden>
+    <div class="cb-detail-inner">
+      <div class="cb-toggle-row">
+        <div>
+          <span class="cb-toggle-label">Nezbytné cookies</span>
+          <span class="cb-toggle-desc">Zajišťují základní funkce webu. Nelze vypnout.</span>
+        </div>
+        <label class="cb-switch cb-switch-disabled">
+          <input type="checkbox" checked disabled>
+          <span class="cb-slider"></span>
+        </label>
+      </div>
+      <div class="cb-toggle-row">
+        <div>
+          <span class="cb-toggle-label">Analytické cookies</span>
+          <span class="cb-toggle-desc">Pomáhají nám pochopit, jak návštěvníci web používají (např. Google Analytics).</span>
+        </div>
+        <label class="cb-switch">
+          <input type="checkbox" id="cb-analytics-chk" checked>
+          <span class="cb-slider"></span>
+        </label>
+      </div>
+      <button id="cb-save-btn" class="cb-btn cb-btn-accept" style="margin-top:16px;width:100%">Uložit nastavení</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ══ COOKIE BANNER ══ */
+#cookie-banner{
+  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(140%);
+  z-index:9999;
+  width:min(780px,calc(100vw - 32px));
+  background:rgba(20,18,16,0.97);
+  border:1px solid rgba(200,135,58,0.35);
+  border-radius:8px;
+  backdrop-filter:blur(20px);
+  box-shadow:0 8px 40px rgba(0,0,0,0.55);
+  transition:transform .45s cubic-bezier(.16,1,.3,1);
+  font-family:'Nunito Sans',sans-serif;
+}
+#cookie-banner.cb-show{transform:translateX(-50%) translateY(0)}
+.cb-inner{display:flex;gap:24px;align-items:center;padding:20px 24px;flex-wrap:wrap}
+.cb-text{flex:1;min-width:200px}
+.cb-title{font-size:15px;font-weight:700;color:#fdfaf6;margin-bottom:5px;letter-spacing:.02em}
+.cb-desc{font-size:12px;color:rgba(250,247,241,.55);line-height:1.65}
+.cb-desc a{color:#b8935a;text-decoration:underline}
+.cb-desc a:hover{color:#cca96e}
+.cb-actions{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.cb-btn{
+  font-family:'Nunito Sans',sans-serif;
+  font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  padding:9px 18px;border-radius:4px;cursor:pointer;
+  white-space:nowrap;transition:background .2s,color .2s,border-color .2s;
+}
+.cb-btn-settings{background:transparent;color:rgba(250,247,241,.45);border:1px solid rgba(250,247,241,.18)}
+.cb-btn-settings:hover{color:rgba(250,247,241,.85);border-color:rgba(250,247,241,.4)}
+.cb-btn-reject{background:rgba(250,247,241,.07);color:rgba(250,247,241,.6);border:1px solid rgba(250,247,241,.12)}
+.cb-btn-reject:hover{background:rgba(250,247,241,.14);color:rgba(250,247,241,.9)}
+.cb-btn-accept{background:#8c6a48;color:#fdfaf6;border:1px solid transparent}
+.cb-btn-accept:hover{background:#a07d58}
+.cb-detail{border-top:1px solid rgba(200,135,58,.2);padding:0 24px 20px}
+.cb-detail-inner{padding-top:16px}
+.cb-toggle-row{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:16px;padding:10px 0;
+  border-bottom:1px solid rgba(250,247,241,.06)
+}
+.cb-toggle-row:last-of-type{border-bottom:none}
+.cb-toggle-label{display:block;font-size:13px;font-weight:600;color:rgba(250,247,241,.85);margin-bottom:3px}
+.cb-toggle-desc{font-size:11px;color:rgba(250,247,241,.4);line-height:1.5;max-width:480px}
+.cb-switch{position:relative;display:inline-block;width:42px;height:24px;flex-shrink:0}
+.cb-switch input{opacity:0;width:0;height:0}
+.cb-slider{
+  position:absolute;inset:0;background:rgba(250,247,241,.18);
+  border-radius:24px;cursor:pointer;transition:.3s;
+}
+.cb-slider::before{
+  content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;
+  background:#fdfaf6;border-radius:50%;transition:.3s;
+}
+.cb-switch input:checked + .cb-slider{background:#8c6a48}
+.cb-switch input:checked + .cb-slider::before{transform:translateX(18px)}
+.cb-switch-disabled{opacity:.4;pointer-events:none}
+@media(max-width:560px){
+  .cb-inner{flex-direction:column;align-items:stretch}
+  .cb-actions{flex-direction:column}
+  .cb-btn{text-align:center}
+}
+</style>
+
+<script>
+// Reveal on scroll
+const revEls = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, {threshold:0.08});
+revEls.forEach(el => obs.observe(el));
+
+// Hero reveals immediately
+document.querySelectorAll('#hero .reveal').forEach(el => el.classList.add('visible'));
+
+// Mobile menu
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mob');
+ham.addEventListener('click', () => {
+  mob.classList.toggle('open');
+  ham.classList.toggle('active');
+});
+function closeMob(){
+  mob.classList.remove('open');
+  ham.classList.remove('active');
+}
+
+// Today hours
+const hoursMap = {
+  0:'Ne: 13:00–18:00',
+  1:'Po: Zavřeno',2:'Út: 10:00–20:00',3:'St: 10:00–20:00',4:'Čt: 10:00–20:00',
+  5:'Pá: 13:00–22:00',6:'So: 13:00–20:00'
+};
+const d = document.getElementById('today-hours');
+if(d) d.textContent = hoursMap[new Date().getDay()] || 'Po–Čt 10:00–20:00';
+
+// Hero video parallax
+const heroVid = document.getElementById('hero-vid');
+let tick = false;
+window.addEventListener('scroll', () => {
+  if(!tick){
+    requestAnimationFrame(() => {
+      if(window.pageYOffset < window.innerHeight)
+        heroVid.style.transform = `scale(1.05) translateY(${window.pageYOffset * 0.12}px)`;
+      tick = false;
+    });
+    tick = true;
+  }
+});
+
+
+heroVid.addEventListener('canplay', () => heroVid.classList.add('loaded'));
+if(heroVid.readyState >= 3) heroVid.classList.add('loaded');
+
+// Dynamic copyright year
+const cyEl = document.getElementById('copy-year');
+if(cyEl) cyEl.textContent = new Date().getFullYear();
+
+// ══ NAČÍTÁNÍ MENU Z JSON ══
+fetch('/data/menu.json')
+  .then(r => r.json())
+  .then(data => {
+    const grid = document.getElementById('menu-grid');
+    const delays = ['reveal','reveal rd1','reveal rd2'];
+    grid.innerHTML = data.kategorie.map((kat, i) => `
+      <div class="menu-cat ${delays[i] || 'reveal'}">
+        <div class="menu-cat-title">${kat.nazev}</div>
+        <div class="menu-cat-sub">${kat.podtitulek}</div>
+        <ul class="menu-items">
+          ${kat.polozky.map(p => `
+            <li class="menu-item">
+              <span class="mi-name">${p.nazev}</span>
+              <span class="mi-price">${p.cena}</span>
+            </li>`).join('')}
+        </ul>
+      </div>`).join('');
+    // Znovu spustit reveal observer na nové elementy
+    grid.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  })
+  .catch(() => console.warn('Menu JSON se nepodařilo načíst'));
+
+// ══ NAČÍTÁNÍ AKCÍ Z JSON ══
+fetch('/data/akce.json')
+  .then(r => r.json())
+  .then(data => {
+    const layout = document.getElementById('events-layout');
+    const hlavni = data.akce.find(a => a.hlavni) || data.akce[0];
+    const probehle = data.akce.filter(a => !a.hlavni);
+    layout.innerHTML = `
+      <div class="event-main reveal">
+        <div class="event-main-img">
+          ${hlavni.foto
+            ? `<img src="${hlavni.foto}" alt="${hlavni.nazev}" style="width:100%;height:100%;object-fit:cover;">`
+            : `<div class="event-main-placeholder">🎸</div>`}
+        </div>
+        <div class="event-main-body">
+          <span class="event-main-tag">${hlavni.tag || ''}</span>
+          <div class="event-main-title">${hlavni.nazev}</div>
+          <div class="event-main-meta">${hlavni.datum}<br>Lower Café, Bystřice n. P.</div>
+          <a href="#contact" class="event-main-cta">Rezervovat místo →</a>
+        </div>
+      </div>
+      ${probehle.length ? `
+      <div class="events-past-col">
+        <span class="events-past-label reveal">Proběhlé akce</span>
+        <div class="events-past-grid">
+          ${probehle.map((a, i) => `
+            <div class="event-past-thumb reveal ${i > 0 ? 'rd'+i : ''}">
+              ${a.foto
+                ? `<img src="${a.foto}" alt="${a.nazev}" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">`
+                : `<div class="event-past-thumb-placeholder" title="${a.nazev}">📸</div>`}
+            </div>`).join('')}
+        </div>
+      </div>` : ''}`;
+    layout.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  })
+  .catch(() => console.warn('Akce JSON se nepodařilo načíst'));
+
+// Netlify Identity – přesměrování po přihlášení
+if(window.netlifyIdentity){
+  window.netlifyIdentity.on('init', user => {
+    if(!user){
+      window.netlifyIdentity.on('login', () => {
+        document.location.href = '/admin/';
+      });
+    }
+  });
+}
+</script>
+</body>
+</html><script>
+// ══ COOKIE BANNER ══
+(function(){
+  var COOKIE_KEY = 'lowercafe_cookies';
+  var banner = document.getElementById('cookie-banner');
+  var detail = document.getElementById('cb-detail');
+
+  function getConsent(){ try{ return JSON.parse(localStorage.getItem(COOKIE_KEY)); }catch(e){ return null; } }
+  function setConsent(obj){ localStorage.setItem(COOKIE_KEY, JSON.stringify(Object.assign({},obj,{ts:Date.now()}))); }
+  function hideBanner(){ banner.classList.remove('cb-show'); }
+
+  if(!getConsent()){
+    setTimeout(function(){ banner.classList.add('cb-show'); }, 700);
+  }
+
+  document.getElementById('cb-accept-btn').addEventListener('click', function(){
+    setConsent({necessary:true, analytics:true});
+    hideBanner();
+  });
+
+  document.getElementById('cb-reject-btn').addEventListener('click', function(){
+    setConsent({necessary:true, analytics:false});
+    hideBanner();
+  });
+
+  document.getElementById('cb-settings-btn').addEventListener('click', function(){
+    var isHidden = detail.hidden;
+    detail.hidden = !isHidden;
+    this.textContent = isHidden ? 'Zavřít' : 'Nastavení';
+  });
+
+  document.getElementById('cb-save-btn').addEventListener('click', function(){
+    var analytics = document.getElementById('cb-analytics-chk').checked;
+    setConsent({necessary:true, analytics:analytics});
+    hideBanner();
+  });
+})();
+</script>

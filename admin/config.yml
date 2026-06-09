@@ -1,0 +1,59 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: cs
+
+collections:
+  - name: "menu"
+    label: "Menu"
+    files:
+      - name: "menu"
+        label: "Nápojový lístek"
+        file: "data/menu.json"
+        format: json
+        fields:
+          - name: "kategorie"
+            label: "Kategorie"
+            widget: "list"
+            label_singular: "Kategorie"
+            fields:
+              - { name: "nazev", label: "Název kategorie", widget: "string" }
+              - { name: "podtitulek", label: "Podtitulek", widget: "string" }
+              - name: "polozky"
+                label: "Položky"
+                widget: "list"
+                label_singular: "Položka"
+                fields:
+                  - { name: "nazev", label: "Název", widget: "string" }
+                  - { name: "cena", label: "Cena (např. 79 Kč)", widget: "string" }
+
+  - name: "akce"
+    label: "Akce"
+    files:
+      - name: "akce"
+        label: "Akce a události"
+        file: "data/akce.json"
+        format: json
+        fields:
+          - name: "akce"
+            label: "Akce"
+            widget: "list"
+            label_singular: "Akce"
+            fields:
+              - { name: "nazev", label: "Název akce", widget: "string" }
+              - { name: "tag", label: "Štítek (např. Živá hudba)", widget: "string", required: false }
+              - { name: "datum", label: "Datum a čas (např. Pátek 20. 6. · 19:00)", widget: "string" }
+              - name: "foto"
+                label: "Fotka akce"
+                widget: "image"
+                required: false
+                hint: "Doporučený formát: 800×600px, JPG nebo WebP"
+              - name: "hlavni"
+                label: "Hlavní (nadcházející) akce?"
+                widget: "boolean"
+                default: false
+                hint: "Zaškrtni u té akce, která se zobrazí jako velká karta. Ostatní se zobrazí jako proběhlé."
