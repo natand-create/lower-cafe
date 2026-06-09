@@ -2,34 +2,34 @@
   "akce": [
     {
       "hlavni": true,
-      "nazev": "degustace",
-      "tag": "Živá hudba",
-      "datum": "Pátek 20. 6. · 19:00",
+      "nazev": "Degustace s vinařem Ing. Liborem Průdkem",
+      "tag": "",
+      "datum": "Pátek 19.6. 2026 18:00",
+      "foto": "/images/uploads/img-20260601-wa0001.jpg"
+    },
+    {
+      "hlavni": false,
+      "nazev": ".",
+      "datum": ".",
+      "foto": "/images/uploads/img-20251017-wa0001.jpg"
+    },
+    {
+      "hlavni": false,
+      "nazev": ".",
+      "datum": ".",
+      "foto": "/images/uploads/img-20260219-wa0003.jpg"
+    },
+    {
+      "hlavni": false,
+      "nazev": ".",
+      "datum": ".",
+      "foto": "/images/uploads/img-20260318-wa0000.jpg"
+    },
+    {
+      "hlavni": false,
+      "nazev": ".",
+      "datum": ".",
       "foto": "/images/uploads/img-20260520-wa0000.jpg"
-    },
-    {
-      "hlavni": false,
-      "nazev": "Saxofonový večer",
-      "datum": "15. 5. 2025",
-      "foto": ""
-    },
-    {
-      "hlavni": false,
-      "nazev": "Jarní slavnost",
-      "datum": "22. 4. 2025",
-      "foto": ""
-    },
-    {
-      "hlavni": false,
-      "nazev": "Čokoládový večer",
-      "datum": "8. 3. 2025",
-      "foto": ""
-    },
-    {
-      "hlavni": false,
-      "nazev": "Koktejlová noc",
-      "datum": "14. 2. 2025",
-      "foto": ""
     }
   ]
 }
