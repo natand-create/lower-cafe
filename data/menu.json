@@ -4,44 +4,122 @@
       "nazev": "Káva",
       "podtitulek": "Lavazza · výběrová zrna",
       "polozky": [
-        { "nazev": "Espresso / Lungo", "cena": "62 Kč" },
-        { "nazev": "Cappuccino", "cena": "79 Kč" },
-        { "nazev": "Latte Machiato", "cena": "79 Kč" },
-        { "nazev": "Flat White", "cena": "90 Kč" },
-        { "nazev": "Espresso Tonik", "cena": "90 Kč" },
-        { "nazev": "Ledová káva", "cena": "90 Kč" },
-        { "nazev": "Vídeňská káva", "cena": "90 Kč" },
-        { "nazev": "Čaj (černý/zelený/ovocný)", "cena": "47 Kč" },
-        { "nazev": "Horká čokoláda 0,3l", "cena": "95 Kč" }
+        {
+          "nazev": "Espresso / Lungo",
+          "cena": "62 Kč"
+        },
+        {
+          "nazev": "Cappuccino",
+          "cena": "79 Kč"
+        },
+        {
+          "nazev": "Latte Machiato",
+          "cena": "79 Kč"
+        },
+        {
+          "nazev": "Flat White",
+          "cena": "90 Kč"
+        },
+        {
+          "nazev": "Espresso Tonik",
+          "cena": "90 Kč"
+        },
+        {
+          "nazev": "Ledová káva",
+          "cena": "90 Kč"
+        },
+        {
+          "nazev": "Vídeňská káva",
+          "cena": "90 Kč"
+        },
+        {
+          "nazev": "Čaj (černý/zelený/ovocný)",
+          "cena": "47 Kč"
+        },
+        {
+          "nazev": "Horká čokoláda 0,3l",
+          "cena": "95 Kč"
+        }
       ]
     },
     {
       "nazev": "Víno & nealko",
       "podtitulek": "Nápojový lístek",
       "polozky": [
-        { "nazev": "Tramíni / Chardonnay / Dornfelder 0,2l", "cena": "60 Kč" },
-        { "nazev": "Svařené víno 0,2l", "cena": "76 Kč" },
-        { "nazev": "Aperol Spritz 0,3l", "cena": "90 Kč" },
-        { "nazev": "Royal Frízo (Prosecco) 0,2l", "cena": "60 Kč" },
-        { "nazev": "Bernard 11° 0,5l", "cena": "52 Kč" },
-        { "nazev": "Točená limonáda bezinka 0,5l", "cena": "50 Kč" },
-        { "nazev": "Pepsi / Tonic / Mirinda / 7UP 0,25l", "cena": "39 Kč" },
-        { "nazev": "Mattoni 0,33l", "cena": "30 Kč" },
-        { "nazev": "Red Bull 0,33l", "cena": "65 Kč" }
+        {
+          "nazev": "Tramíni / Chardonnay / Dornfelder 0,2l",
+          "cena": "60 Kč"
+        },
+        {
+          "nazev": "Svařené víno 0,2l",
+          "cena": "76 Kč"
+        },
+        {
+          "nazev": "Aperol Spritz 0,3l",
+          "cena": "90 Kč"
+        },
+        {
+          "nazev": "Royal Frízo (Prosecco) 0,2l",
+          "cena": "60 Kč"
+        },
+        {
+          "nazev": "Bernard 11° 0,5l",
+          "cena": "52 Kč"
+        },
+        {
+          "nazev": "Točená limonáda bezinka 0,5l",
+          "cena": "50 Kč"
+        },
+        {
+          "nazev": "Pepsi / Tonic / Mirinda / 7UP 0,25l",
+          "cena": "39 Kč"
+        },
+        {
+          "nazev": "Mattoni 0,33l",
+          "cena": "30 Kč"
+        },
+        {
+          "nazev": "Red Bull 0,33l",
+          "cena": "65 Kč"
+        }
       ]
     },
     {
       "nazev": "Koktejly",
       "podtitulek": "Signature drinks",
       "polozky": [
-        { "nazev": "Pina Colada", "cena": "129 Kč" },
-        { "nazev": "Mojito Classic", "cena": "129 Kč" },
-        { "nazev": "Cuba Libre", "cena": "129 Kč" },
-        { "nazev": "Campari Spritz", "cena": "129 Kč" },
-        { "nazev": "Bombardino", "cena": "150 Kč" },
-        { "nazev": "Hugo Spritz", "cena": "150 Kč" },
-        { "nazev": "Virgin Colada", "cena": "109 Kč" },
-        { "nazev": "Virgin Mojito", "cena": "109 Kč" }
+        {
+          "nazev": "Pina Colada",
+          "cena": "128 Kč"
+        },
+        {
+          "nazev": "Mojito Classic",
+          "cena": "129 Kč"
+        },
+        {
+          "nazev": "Cuba Libre",
+          "cena": "129 Kč"
+        },
+        {
+          "nazev": "Campari Spritz",
+          "cena": "129 Kč"
+        },
+        {
+          "nazev": "Bombardino",
+          "cena": "150 Kč"
+        },
+        {
+          "nazev": "Hugo Spritz",
+          "cena": "150 Kč"
+        },
+        {
+          "nazev": "Virgin Colada",
+          "cena": "109 Kč"
+        },
+        {
+          "nazev": "Virgin Mojito",
+          "cena": "109 Kč"
+        }
       ]
     }
   ]
