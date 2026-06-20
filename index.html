@@ -1312,8 +1312,12 @@ footer{
       DŮLEŽITÉ PRO iOS AUTOPLAY:
       - muted + playsinline + autoplay musí být vždy všechny tři
       - webkit-playsinline je nutný pro starší iOS Safari
-      - preload="none" neblokuje autoplay politiku mobilů
+      - preload="auto" zajistí, že iOS video rovnou začne stahovat
+        (s preload="none" Safari na iPhonu autoplay často vůbec nespustí
+        a místo toho ukáže tlačítko Přehrát)
       - controls NESMÍ být přítomno
+      - muted se navíc nastavuje i přes JS vlastnost níže, protože iOS
+        občas ignoruje samotný HTML atribut
     -->
     <video id="hero-vid"
       autoplay
@@ -1325,8 +1329,8 @@ footer{
       poster="herovid-poster.jpg"
       disablePictureInPicture
       disableRemotePlayback>
-      <source src="herovid.webm" type="video/webm"/>
       <source src="herovid.mp4" type="video/mp4"/>
+      <source src="herovid.webm" type="video/webm"/>
     </video>
     <div class="hero-gradient"></div>
   </div>
@@ -1851,12 +1855,20 @@ const heroVid = document.getElementById('hero-vid');
 // Mobilní autoplay fallback — klíčová funkce pro iOS/Android
 function tryPlayVideo() {
   if (!heroVid) return;
+
+  // iOS Safari občas ignoruje samotný HTML atribut muted při autoplay,
+  // proto se nastavuje i přes JS vlastnosti přímo na elementu
+  heroVid.muted = true;
+  heroVid.defaultMuted = true;
+  heroVid.setAttribute('muted', '');
+
   var playPromise = heroVid.play();
   if (playPromise !== undefined) {
     playPromise.catch(function() {
-      // Autoplay selhal (pravděpodobně Android Chrome bez interakce)
+      // Autoplay selhal (typicky když prohlížeč ještě nemá interakci)
       // Zkus po první uživatelské interakci
       var playOnInteraction = function() {
+        heroVid.muted = true;
         heroVid.play().catch(function() {});
         document.removeEventListener('touchstart', playOnInteraction);
         document.removeEventListener('touchend', playOnInteraction);
@@ -1869,10 +1881,19 @@ function tryPlayVideo() {
   }
 }
 
-// Spusť video co nejdříve
+// Spusť video co nejdříve — vícenásobné pokusy přes různé lifecycle eventy,
+// protože na iOS není jisté, který z nich proběhne první/spolehlivě
 tryPlayVideo();
 document.addEventListener('DOMContentLoaded', tryPlayVideo);
 window.addEventListener('load', tryPlayVideo);
+if (heroVid) {
+  heroVid.addEventListener('loadedmetadata', tryPlayVideo);
+  heroVid.addEventListener('canplay', tryPlayVideo);
+  // iOS Safari po návratu z pozadí (např. přepnutí appky) video občas pauzne
+  document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) tryPlayVideo();
+  });
+}
 
 // Parallax efekt pro desktop
 var tick = false;
